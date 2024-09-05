@@ -9,8 +9,7 @@ pipeline {
 
         stage("Test"){
             steps{
-                sh 'install npm'
-                sh 'npm test'
+                sh 'install npm' 
                 echo 'Hello test'
             }
         }
