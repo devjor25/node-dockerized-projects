@@ -22,13 +22,14 @@ pipeline {
             }
         }
 
-        stage("Start"){
-            steps{
+        stage('Start') {
+            steps {
+                sh 'chmod +x ./node_modules/.bin/nodemon'
                 sh 'npm start'
                 echo 'Hello Start'
             }
         }
-
+       
         stage("Build Image"){
             steps{  
                 echo 'Hello build image'
