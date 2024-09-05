@@ -23,8 +23,7 @@ pipeline {
         }
 
         stage("Build Image"){
-            steps{
-                sh 'docker build -t my-node-app:2.0 .'
+            steps{  
                 echo 'Hello build image'
             }
         }
