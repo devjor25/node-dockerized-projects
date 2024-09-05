@@ -17,8 +17,15 @@ pipeline {
 
         stage("Build"){
             steps{
-                sh 'npm run build'
+               
                 echo 'Hello build'
+            }
+        }
+
+        stage("Start"){
+            steps{
+                sh 'npm start'
+                echo 'Hello Start'
             }
         }
 
