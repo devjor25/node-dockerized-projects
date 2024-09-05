@@ -4,13 +4,14 @@ pipeline {
         stage("checkout"){
             steps{
                 checkout scm
+                echo 'Hello checkoutl'
             }
         }
 
         stage("Test"){
             steps{
-                sh 'install npm' 
-                echo 'Hello test'
+                sh 'npm install'
+                echo 'Hello install'
             }
         }
 
