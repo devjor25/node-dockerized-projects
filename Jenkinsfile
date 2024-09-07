@@ -25,7 +25,7 @@ pipeline {
         stage('Start') {
             steps {
                 //sh 'chmod +x ./node_modules/.bin/nodemon'
-                sh 'npm start'
+                //sh 'npm start'
                 echo 'Hello Start'
             }
         }
