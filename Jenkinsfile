@@ -10,7 +10,7 @@ pipeline {
 
         stage("Test"){
             steps{
-                sh 'npm install'
+                //sh 'npm install'
                 echo 'Hello install'
             }
         }
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Start') {
             steps {
-                sh 'chmod +x ./node_modules/.bin/nodemon'
+                //sh 'chmod +x ./node_modules/.bin/nodemon'
                 sh 'npm start'
                 echo 'Hello Start'
             }
