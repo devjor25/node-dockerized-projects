@@ -32,14 +32,14 @@ pipeline {
         
         stage('Check Docker') {
             steps {
-                sh 'docker --version'
+                bat 'docker --version'
                 echo 'Hello Docker'
             }
         }
        
         stage("Build Image"){
             steps{  
-                sh 'docker build -t my-node-app-v1 .'
+                bat 'docker build -t my-node-app-v1 .'
                 echo 'Hello build image'
             }
         }
