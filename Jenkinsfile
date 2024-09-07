@@ -19,6 +19,7 @@ pipeline {
             steps{
                
                 echo 'Hello build'
+                //bat 'npm build'
             }
         }
 
@@ -26,6 +27,7 @@ pipeline {
             steps {
                 //sh 'chmod +x ./node_modules/.bin/nodemon'
                 //sh 'npm start'
+                bat 'npm start'
                 echo 'Hello Start'
             }
         }
@@ -39,7 +41,7 @@ pipeline {
        
         stage("Build Image"){
             steps{  
-                bat 'docker build -t my-node-app-v1 .'
+                bat 'docker build -t my-node-app-v3 .'
                 echo 'Hello build image'
             }
         }
