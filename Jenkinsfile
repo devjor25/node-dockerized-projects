@@ -29,6 +29,13 @@ pipeline {
                 echo 'Hello Start'
             }
         }
+        
+        stage('Check Docker') {
+            steps {
+                sh 'docker --version'
+                echo 'Hello Docker'
+            }
+        }
        
         stage("Build Image"){
             steps{  
